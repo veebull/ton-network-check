@@ -10,7 +10,8 @@ import { Alert } from './components/Alert';
 // Constants to avoid magic strings/numbers
 const CONSTANTS = {
   TESTNET_CHAIN_ID: '-3',
-  MANIFEST_URL: 'https://raw.githubusercontent.com/veebull/ton-network-check/refs/heads/main/public/tonconnect-manifest.json',
+  MANIFEST_URL:
+    'https://raw.githubusercontent.com/veebull/ton-network-check/refs/heads/main/public/tonconnect-manifest.json',
 } as const;
 
 // Memoized Alert component to prevent unnecessary re-renders
@@ -46,6 +47,7 @@ function App() {
 
   return (
     <div className='App' style={styles.container}>
+      <h1 style={styles.title}>TON Network Validator</h1>
       <div style={styles.buttonContainer}>
         <TonConnectButton />
       </div>
@@ -65,6 +67,9 @@ const styles = {
   container: {
     maxHeight: '100vh',
     minWidth: '100vw',
+  },
+  title: {
+    textAlign: 'center',
   },
   buttonContainer: {
     display: 'flex',
